@@ -1,0 +1,181 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #000000; /* Black background for the navbar */
+    transition: background-color 0.3s ease;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+    color: #ffffff; /* White text color for contrast */
+}
+
+.navbar .navbar-brand:hover,
+.navbar .navbar-nav .nav-link:hover {
+    color: #f8f9fa; /* Slightly lighter text color on hover */
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;base64,...'); /* Update with your own base64-encoded icon if needed */
+}
+
+/* Navbar on scroll effect (optional) */
+.navbar.scrolled {
+    background-color: #000000; /* Maintain black background when scrolled */
+}
+
+/* Header */
+header {
+    background: url('./images/intro\ pic.jpg') no-repeat center center/cover;
+    color: #dd1818;
+    padding: 80px 0; /* Increase padding for better visual appeal */
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+
+header h1 {
+    opacity: 0;
+    animation: slideIn 1s ease-out 0.5s forwards;
+}
+
+header p {
+    opacity: 0;
+    animation: slideIn 1s ease-out 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Card Images */
+.card-img-top {
+    height: 200px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+    width: 100%; /* Make sure the image spans the full width of the card */
+    border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
+}
+
+/* Section Headers */
+h2 {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Card Animations */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Chatbot Section */
+#chatbot {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+#chatbot h2 {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+}
+
+/* Contact Form Transitions */
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #01080e;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* AI Use Cases */
+.circle-list {
+    list-style-type: none;
+    padding: 0;
+}
+.circle-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+.circle-list li::before {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin-right: 20px;
+    animation: growCircle 1s ease-in-out;
+}
+.circle-list li span {
+    font-size: 18px;
+}
+
+@keyframes growCircle {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
